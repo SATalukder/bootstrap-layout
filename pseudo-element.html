@@ -44,6 +44,22 @@
             width: 100%;
             background-color: magenta;
         }
+
+        input:required+label::after {
+            content: " * ";
+            color: red;
+        }
+
+        .fieldset {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        input:required+label::after {
+            content: " * ";
+            color: red;
+        }
     </style>
 </head>
 
@@ -58,6 +74,18 @@
         </blockquote>
         <blockquote>Every adversity brings with it the seed of an equivalent advantage.
         </blockquote>
+    </section>
+    <section>
+
+        <input type="text" required>
+        <label for="">Name</label>
+
+        <div class="fieldset">
+            <input type="text" required>
+            <label>Name</label>
+        </div>
+
+
     </section>
 </body>
 
